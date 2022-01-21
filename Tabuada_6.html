@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+ 
+    for(var multiplicador = 1; multiplicador <= 10; multiplicador++) {
+
+    mostra(6 * multiplicador);                      // ++ atalho chamado de "pós incremento" usado para reduzir repetições. 
+
+    }
+
+    mostra("FIM");
+
+</script>

@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+
+<input/>
+<button>Compare com o meu segredo</button>
+
+<script> // A contagem dos elementos (ítens) no array começa em 0. 
+
+    var segredos = [5,7,10,2,3]; // para declarar uma array são usados os [colchetes]; Array é uma lista de ítens.
+
+    var input = document.querySelector("input");
+        input.focus();
+
+    function verifica() {
+
+    var achou = false;
+
+    for(var posicao = 0; posicao < segredos.length; posicao++) { // ".length" retorna a quantidade de elementos que o array possui.
+        if(input.value == segredos[posicao]) {
+
+            alert("Você ACERTOU!");
+            achou = true;
+            break;
+        }
+    } 
+
+    if(achou == false) {
+        alert("Você ERROU!");
+    }
+
+    input.value = "";
+    input.focus();
+
+    }
+
+    var button = document.querySelector("button");
+
+    button.onclick = verifica;
+
+</script>

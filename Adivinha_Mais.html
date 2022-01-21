@@ -1,0 +1,42 @@
+<meta charset = "UTF-8">
+
+<input/> <!-- entrada --> <!-- essa tag que está sendo utilizada é para fazer comentários no mundo HTML -->
+
+<button> Compare com o meu segredo </button>
+
+<script> 
+
+	var segredo = Math.round(Math.random() * 10);
+
+	var input = document.querySelector("input");
+	input.focus();
+
+	document.addEventListener('keypress', function(e) { // com essa função, também pode-se pesquisar o número secreto apertando a tecla "ENTER" do teclado, sem a necessidade de somente ter que aperter o botão com o ponteiro do mouse.
+        if(e.which == 13){
+           verifica(); } 
+        }, false);
+
+	function verifica() {	
+
+    	// "valor digitado"
+
+		if (input.value == segredo) {
+
+			alert("Você ACERTOU!");
+
+		} else {
+
+			alert("Você ERROU!");
+		}
+
+		input.value = ""; // como o "input.value" recebe uma string vazia, caso o valor dê errado, a caixinha para escrita é limpada
+	    input.focus(); 
+	}
+
+	var button = document.querySelector("button");
+
+	// "no clicar"
+
+	button.onclick = verifica;
+
+</script>

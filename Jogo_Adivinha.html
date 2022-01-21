@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha() {
+
+    document.write("<br>");
+    document.write("<br>");
+}
+
+function mostra(frase) {
+
+    document.write(frase);
+    pulaLinha();
+}
+
+var numeroPensado = 5;
+
+var chute = parseInt(prompt("Digite seu chute:"));
+
+       //igual     true
+if (chute == numeroPensado) {
+
+	mostra ("Você acertou!");
+}
+
+      //diferente  false
+if (chute != numeroPensado) {
+
+	mostra ("Você errou! O número pensado é " + numeroPensado);
+}
+
+</script>

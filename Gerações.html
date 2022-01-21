@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+
+function pulaLinha() {
+    document.write("<br>"); }
+
+function mostra(frase) {
+    document.write(frase);
+    pulaLinha(); }
+
+var idadeMediaQuandoTemFilhos = 28;
+
+var anoAtual = 2021; 
+
+var quantidadeDeGeracoes = (anoAtual - 1500) / idadeMediaQuandoTemFilhos;
+
+mostra (quantidadeDeGeracoes.toFixed(1) );
+
+// Para acrescentar apenas duas casas decimais após o ponto ou vírgula de uma dízima periódica , basta utilizar .toFixed(2)
+
+pulaLinha();
+
+mostra ("ou arredondando: " + Math.round(quantidadeDeGeracoes) );
+
+</script>
